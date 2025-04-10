@@ -1,56 +1,237 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../image/fondo1.png);
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: opacity 0.5s ease-in;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .card {
-    width: 300px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
     text-align: center;
-}
-
-.card-header {
-    background-color: #007bff;
-    padding: 20px;
-}
-
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid #fff;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out forwards;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 25px;
+    overflow-y: auto;
 }
 
-.card-body h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
+.card-header {
+    background-color: #f89036;
+    padding: 30px;
 }
 
-.card-body p {
-    color: #555;
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid rgb(201, 120, 21);
 }
 
 button {
-    background-color: #007bff;
+    background-color: #f89036;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c76b1c;
+}
+
+.skills {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.skills h3 {
+    text-align: center;
+    color: #333;
+}
+
+.bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #f89036;
+    height: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 10px;
+}
+
+/* Scroll naranja */
+.card-body::-webkit-scrollbar,
+.modal-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.card-body::-webkit-scrollbar-thumb,
+.modal-scroll::-webkit-scrollbar-thumb {
+    background-color: #f89036;
+    border-radius: 8px;
+}
+.card-body::-webkit-scrollbar-track,
+.modal-scroll::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
+
+.loader::before {
+    content: "Cargando...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section h3 {
+    color: #333;
+}
+
+.flag-icon {
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Equipos visuales */  
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.team-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+.sporting {
+    background-color: #007A33;
+}
+.mu {
+    background-color: #DA291C;
+}
+.madrid {
+    background-color: #00529F;
+}
+.juventus {
+    background-color: #000000;
+}
+.alnassr {
+    background-color: #FFD700;
+    color: black;
+}
+.portugal {
+    background-color: #006600;
 }
