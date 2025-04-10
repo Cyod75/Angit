@@ -1,59 +1,57 @@
-/* Estilos generales */
+/* Estilos base conservando tu diseño original */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../img/fondoets.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+    padding: 20px;
+    min-height: 100vh;
 }
 
+/* Tarjeta - Combinando tus estilos con Bootstrap */
 .card {
-    width: 400px;
-    height: 550px;
-    margin: 50px auto;
-    background-color: #fff;
+    border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    text-align: center;
 }
 
 .card-header {
-    background-color: #fb71e4;
+    background-color: #fb71e4 !important; /* Sobreescribimos Bootstrap */
     padding: 20px;
 }
 
 .profile-img {
     width: 120px;
     height: 120px;
-    border-radius: 70%;
+    border-radius: 50%;
     border: 5px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-body {
-    padding: 20px;
+/* Mejoras para el botón */
+.btn-primary {
+    background-color: #fb71e4 !important;
+    border-color: #fb71e4 !important;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
-.card-body h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
+.btn-primary:hover {
+    background-color: #e913a9 !important;
+    border-color: #e913a9 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(251, 113, 228, 0.3);
+}
+
+/* Textos */
+.card-body p:first-of-type {
+    color: #ab710d;
+    font-weight: bold;
 }
 
 .card-body p {
     color: #555;
-}
-
-button {
-    background-color: #fdb7e87b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    position: relative;
-    bottom: -50px;
-}
-
-button:hover {
-    background-color: #0056b3;
+    line-height: 1.6;
 }
