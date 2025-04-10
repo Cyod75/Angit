@@ -28,10 +28,10 @@ body {
 }
 
 .profile-img {
-    width: 120px !important;
-    height: 120px !important;
-    border-radius: 70% !important;
-    border: 5px solid #fff !important;
+    width: 120px;
+    height: 120px;
+    border-radius: 70%;
+    border: 5px solid #f40101;
 }
 
 .card-body {
@@ -45,12 +45,12 @@ body {
 }
 
 .card-body p {
-    color: #555 !important;
+    color: #ab710d !important;
 }
 
 button {
-    background-color: #fdb7e87b !important;
-    color: white !important;
+    background-color: #e913a97b !important;
+    color: rgb(225, 106, 106) !important;
     border: none !important;
     padding: 10px 20px !important;
     cursor: pointer !important;
@@ -61,5 +61,5 @@ button {
 }
 
 button:hover {
-    background-color: #8606607b !important;
+    background-color: #76aae1 !important;
 }
