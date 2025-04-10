@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-
 }
 
 .container {
@@ -15,6 +14,14 @@ body {
     align-items: center;
     height: 100vh;
     transition: opacity 0.5s ease-in;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .hidden {
@@ -130,6 +137,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
