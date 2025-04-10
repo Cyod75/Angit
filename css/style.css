@@ -1,7 +1,11 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-image: url(../image/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
 }
@@ -12,13 +16,14 @@ body {
     margin: 50px auto;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     overflow: hidden;
     text-align: center;
+    
 }
 
 .card-header {
-    background-color: #fb71e4;
+    background-color: #f89036;
     padding: 20px;
 }
 
@@ -26,7 +31,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 70%;
-    border: 5px solid #f40101;
+    border: 5px solid #f8f8f8;
 }
 
 .card-body {
@@ -43,8 +48,8 @@ body {
 }
 
 button {
-    background-color: #e913a97b;
-    color: rgb(225, 106, 106);
+    background-color: #f89036;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -52,8 +57,10 @@ button {
     margin-top: 10px;
     position: relative;
     bottom: -50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
-    background-color: #76aae1;
+    background-color: #ad580e;
+    color: rgb(255, 255, 255);
 }
