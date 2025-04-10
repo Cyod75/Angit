@@ -1,30 +1,35 @@
-/* Estilos generales */
+/* Estilos generales con !important para sobrescribir Bootstrap */
+@font-face {
+    font-family: "generalText";
+    src: url("../font/BebasNeue-Regular.woff2") format("woff2");
+}
+
 body {
-    font-family: Arial, sans-serif;
-    /* background-color: #f4f4f4; */
+    font-family: "generalText" !important;
+    /* background-color: #f4f4f4 !important; */
     background-image: url(../image/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .card {
-    width: 400px;
-    height: 550px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    text-align: center;
+    width: 400px !important;
+    height: 550px !important;
+    margin: 50px auto !important;
+    background-color: #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    overflow: hidden !important;
+    text-align: center !important;
     
 }
 
 .card-header {
-    background-color: #f89036;
-    padding: 20px;
+    background-color: #f89036 !important;
+    padding: 20px !important;
 }
 
 .profile-img {
@@ -35,32 +40,33 @@ body {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 20px !important;
+    font-size: 1.2em !important;
 }
 
 .card-body h2 {
-    margin: 10px 0;
-    font-size: 1.5em;
+    margin: 10px 0 !important;
+    font-size: 2em !important;
 }
 
 .card-body p {
-    color: #ab710d;
+    color: #ab710d !important;
 }
 
 button {
-    background-color: #f89036;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    position: relative;
-    bottom: -50px;
+    background-color: #f89036 !important;
+    color: rgb(0, 0, 0) !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    border-radius: 5px !important;
+    margin-top: 10px !important;
+    position: relative !important;
+    bottom: -50px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
     background-color: #ad580e;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) !important;
 }
