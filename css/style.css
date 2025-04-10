@@ -56,6 +56,7 @@ body {
 }
 
 .profile-img {
+    background-color: #fff;
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -78,6 +79,18 @@ button {
     transition: background-color 0.3s;
 }
 
+.ImgEquipo{
+    width: 20px;
+    vertical-align: middle;
+}
+
+.ButtonCamavinga{
+background-color: #0D6EFD;
+}
+.ButtonCamavinga:hover{
+    background-color: #08316fc2;
+    }
+    
 button:hover {
     background-color: #c76b1c;
 }
