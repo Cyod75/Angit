@@ -13,12 +13,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: row-reverse; /* Cambiado para invertir el orden de las tarjetas */
+    flex-direction: row-reverse;
     gap: 20px;
     transition: opacity 0.5s ease-in;
 }
+
 .card-jude {
-    background-color: rgba(255, 255, 0, 0.9); /* Fondo amarillo claro */
+    background-color: rgba(255, 255, 0, 0.9);
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -27,24 +28,32 @@ body {
 }
 
 .card-jude .card-header {
-    background-color: #ffeb3b; /* Color de fondo de la cabecera amarillo brillante */
+    background-color: #ffeb3b;
 }
 
 .card-jude .profile-img {
-    border: 5px solid #fbc02d; /* Bordes de la imagen con un tono más oscuro de amarillo */
+    border: 5px solid #fbc02d;
 }
 
 .card-jude button {
-    background-color: #fbc02d; /* Color del botón en un amarillo más oscuro */
+    background-color: #fbc02d;
     color: white;
 }
 
 .card-jude button:hover {
-    background-color: #f9a825; /* Hover con un amarillo más oscuro */
+    background-color: #f9a825;
 }
 
 .card-jude .progress {
-    background-color: #fbc02d; /* Barra de progreso amarilla */
+    background-color: #fbc02d;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .hidden {
@@ -52,7 +61,6 @@ body {
     pointer-events: none;
 }
 
-/* Tarjeta - Combinando tus estilos con Bootstrap */
 .card {
     width: 420px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -61,17 +69,14 @@ body {
     text-align: center;
     overflow: hidden;
     animation: fadeInUp 1s ease-out forwards;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card-body {
+    padding: 25px;
+    overflow-y: auto;
 }
 
 .card-header {
@@ -80,14 +85,11 @@ body {
 }
 
 .profile-img {
+    background-color: #fff;
     width: 130px;
     height: 130px;
     border-radius: 50%;
     border: 5px solid rgb(201, 120, 21);
-}
-
-.card-body {
-    padding: 25px;
 }
 
 button {
@@ -103,7 +105,20 @@ button {
 }
 
 button:hover {
-    background-color: #c76b1c;
+    background-color: #bb651a;
+}
+
+.ImgEquipo {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.ButtonCamavinga {
+    background-color: #0D6EFD;
+}
+
+.ButtonCamavinga:hover {
+    background-color: #08316fc2;
 }
 
 .skills {
@@ -161,6 +176,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
@@ -171,6 +187,29 @@ button:hover {
     max-width: 500px;
     text-align: center;
     position: relative;
+}
+
+.modal-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.card-body::-webkit-scrollbar,
+.modal-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-body::-webkit-scrollbar-thumb,
+.modal-scroll::-webkit-scrollbar-thumb {
+    background-color: #f89036;
+    border-radius: 8px;
+}
+
+.card-body::-webkit-scrollbar-track,
+.modal-scroll::-webkit-scrollbar-track {
+    background: #eee;
 }
 
 .close {
@@ -200,5 +239,63 @@ button:hover {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+}
+
+/* Sección adicional */
+.section {
+    margin-top: 20px;
+}
+
+.section h3 {
+    color: #333;
+}
+
+.flag-icon {
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Equipos visuales */
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.team-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+.sporting {
+    background-color: #007A33;
+}
+
+.mu {
+    background-color: #DA291C;
+}
+
+.madrid {
+    background-color: #00529F;
+}
+
+.juventus {
+    background-color: #000000;
+}
+
+.alnassr {
+    background-color: #FFD700;
+    color: black;
+}
+
+.portugal {
+    background-color: #006600;
 }
 
