@@ -11,6 +11,7 @@
     <div id="loader" class="loader"></div>
 
     <div class="container hidden">
+        <!-- Tarjeta de Cristiano Ronaldo -->
         <div class="card">
             <div class="card-header">
                 <img src="./image/ronaldo.png" alt="Foto de perfil" class="profile-img"/>
@@ -33,20 +34,56 @@
 
                 <div class="social">
                     <a href="https://www.instagram.com/cristiano/" target="_blank">
-                      <img src=".//image/instagram.png" alt="Instagram" class="social-icon" />
+                      <img src="./image/instagram.png" alt="Instagram" class="social-icon" />
                     </a>
-                    <a href="https://x.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                    <a href="https://x.com/Cristiano" target="_blank">
                       <img src="./image/x.png" alt="Twitter" class="social-icon" />
                     </a>
-                    <a href="https://www.facebook.com/Cristiano/?locale=es_ES" target="_blank">
+                    <a href="https://www.facebook.com/Cristiano" target="_blank">
                       <img src="./image/facebook.png" alt="Facebook" class="social-icon" />
                     </a>
                   </div>
             </div>
         </div>
+
+        <!-- Tarjeta de Jude Bellingham -->
+        <div class="card">
+            <div class="card card-jude">
+            <div class="card-header">
+                <img src="./image/bellingham.png" alt="Foto de perfil" class="profile-img"/>
+            </div>
+            <div class="card-body">
+                <h2>Jude Bellingham</h2>
+                <p>Centrocampista del Real Madrid</p>
+                <p>Joven promesa con gran visión, técnica y liderazgo en el campo.</p>
+                <button id="moreInfoBtnBellingham">Más Info</button>
+
+                <div class="skills">
+                    <h3>Habilidades</h3>
+                    <p>Visión de juego</p>
+                    <div class="bar"><div class="progress" style="width: 92%"></div></div>
+                    <p>Control del balón</p>
+                    <div class="bar"><div class="progress" style="width: 88%"></div></div>
+                    <p>Resistencia</p>
+                    <div class="bar"><div class="progress" style="width: 90%"></div></div>
+                </div>
+
+                <div class="social">
+                    <a href="https://www.instagram.com/judebellingham/" target="_blank">
+                      <img src="./image/instagram.png" alt="Instagram" class="social-icon" />
+                    </a>
+                    <a href="https://x.com/BellinghamJude" target="_blank">
+                      <img src="./image/x.png" alt="Twitter" class="social-icon" />
+                    </a>
+                    <a href="https://www.facebook.com/judebellinghamofficial" target="_blank">
+                      <img src="./image/facebook.png" alt="Facebook" class="social-icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Cristiano Ronaldo -->
     <div id="modal" class="modal hidden">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -56,6 +93,36 @@
         </div>
     </div>
 
+    <!-- Modal Jude Bellingham -->
+    <div id="modalBellingham" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeBellingham">&times;</span>
+            <h2>Sobre Jude Bellingham</h2>
+            <p>Jude Bellingham es una de las mayores promesas del fútbol mundial. Con tan solo 20 años, ya brilla como figura del Real Madrid.</p>
+            <p>Su estilo combina inteligencia táctica, calidad técnica y un carácter competitivo ejemplar.</p>
+        </div>
+    </div>
+
     <script src="./js/script.js"></script>
+    <script>
+        // Script extra para el modal de Bellingham
+        const moreInfoBtnBellingham = document.getElementById('moreInfoBtnBellingham');
+        const modalBellingham = document.getElementById('modalBellingham');
+        const closeBellingham = document.getElementById('closeBellingham');
+
+        moreInfoBtnBellingham.addEventListener('click', () => {
+            modalBellingham.classList.remove('hidden');
+        });
+
+        closeBellingham.addEventListener('click', () => {
+            modalBellingham.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modalBellingham) {
+                modalBellingham.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>

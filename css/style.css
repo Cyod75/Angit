@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-
 }
 
 .container {
@@ -14,7 +13,38 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: row-reverse; /* Cambiado para invertir el orden de las tarjetas */
+    gap: 20px;
     transition: opacity 0.5s ease-in;
+}
+.card-jude {
+    background-color: rgba(255, 255, 0, 0.9); /* Fondo amarillo claro */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.card-jude .card-header {
+    background-color: #ffeb3b; /* Color de fondo de la cabecera amarillo brillante */
+}
+
+.card-jude .profile-img {
+    border: 5px solid #fbc02d; /* Bordes de la imagen con un tono más oscuro de amarillo */
+}
+
+.card-jude button {
+    background-color: #fbc02d; /* Color del botón en un amarillo más oscuro */
+    color: white;
+}
+
+.card-jude button:hover {
+    background-color: #f9a825; /* Hover con un amarillo más oscuro */
+}
+
+.card-jude .progress {
+    background-color: #fbc02d; /* Barra de progreso amarilla */
 }
 
 .hidden {
@@ -170,3 +200,4 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+
