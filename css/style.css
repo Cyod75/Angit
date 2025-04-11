@@ -13,7 +13,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: row-reverse;
+    gap: 20px;
     transition: opacity 0.5s ease-in;
+}
+
+.card-jude {
+    background-color: rgba(255, 255, 0, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.card-jude .card-header {
+    background-color: #ffeb3b;
+}
+
+.card-jude .profile-img {
+    border: 5px solid #fbc02d;
+}
+
+.card-jude button {
+    background-color: #fbc02d;
+    color: white;
+}
+
+.card-jude button:hover {
+    background-color: #f9a825;
+}
+
+.card-jude .progress {
+    background-color: #fbc02d;
 }
 
 .cards-wrapper {
@@ -72,20 +104,21 @@ button {
     transition: background-color 0.3s;
 }
 
-.ImgEquipo{
+button:hover {
+    background-color: #bb651a;
+}
+
+.ImgEquipo {
     width: 20px;
     vertical-align: middle;
 }
 
-.ButtonCamavinga{
-background-color: #0D6EFD;
+.ButtonCamavinga {
+    background-color: #0D6EFD;
 }
-.ButtonCamavinga:hover{
+
+.ButtonCamavinga:hover {
     background-color: #08316fc2;
-    }
-    
-button:hover {
-    background-color: #bb651a;
 }
 
 .skills {
@@ -163,16 +196,17 @@ button:hover {
     padding-right: 10px;
 }
 
-/* Scroll naranja */
 .card-body::-webkit-scrollbar,
 .modal-scroll::-webkit-scrollbar {
     width: 8px;
 }
+
 .card-body::-webkit-scrollbar-thumb,
 .modal-scroll::-webkit-scrollbar-thumb {
     background-color: #f89036;
     border-radius: 8px;
 }
+
 .card-body::-webkit-scrollbar-track,
 .modal-scroll::-webkit-scrollbar-track {
     background: #eee;
@@ -206,28 +240,8 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 9999;
-}
 
-.loader::before {
-    content: "Cargando...";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Sección adicional (de main) */
+/* Sección adicional */
 .section {
     margin-top: 20px;
 }
@@ -250,6 +264,7 @@ button:hover {
     justify-content: center;
     margin-top: 10px;
 }
+
 .team-badge {
     padding: 6px 12px;
     border-radius: 15px;
@@ -262,19 +277,24 @@ button:hover {
 .sporting {
     background-color: #007A33;
 }
+
 .mu {
     background-color: #DA291C;
 }
+
 .madrid {
     background-color: #00529F;
 }
+
 .juventus {
     background-color: #000000;
 }
+
 .alnassr {
     background-color: #FFD700;
     color: black;
 }
+
 .portugal {
     background-color: #006600;
 }
