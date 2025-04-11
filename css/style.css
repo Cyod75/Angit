@@ -16,6 +16,14 @@ body {
     transition: opacity 0.5s ease-in;
 }
 
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
 .hidden {
     opacity: 0;
     pointer-events: none;
@@ -45,6 +53,7 @@ body {
 }
 
 .profile-img {
+    background-color: #fff;
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -63,8 +72,20 @@ button {
     transition: background-color 0.3s;
 }
 
+.ImgEquipo{
+    width: 20px;
+    vertical-align: middle;
+}
+
+.ButtonCamavinga{
+background-color: #0D6EFD;
+}
+.ButtonCamavinga:hover{
+    background-color: #08316fc2;
+    }
+    
 button:hover {
-    background-color: #c76b1c;
+    background-color: #bb651a;
 }
 
 .skills {
@@ -122,6 +143,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
@@ -184,7 +206,28 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
 
+.loader::before {
+    content: "Cargando...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Sección adicional (de main) */
 .section {
     margin-top: 20px;
 }
@@ -199,7 +242,7 @@ button:hover {
     vertical-align: middle;
 }
 
-/* Equipos visuales */  
+/* Equipos visuales */
 .teams {
     display: flex;
     flex-wrap: wrap;
@@ -235,3 +278,4 @@ button:hover {
 .portugal {
     background-color: #006600;
 }
+

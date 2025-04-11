@@ -1,73 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Tarjeta de Presentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjetas de Presentación</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <div id="loader" class="loader"></div>
 
     <div class="container hidden">
-        <div class="card">
-            <div class="card-header">
-                <img src="./image/ronaldo.png" alt="Foto de perfil" class="profile-img"/>
-            </div>
-            <div class="card-body">
-                <h2>
-                    Cristiano Ronaldo 
-                    <img src="./image/portugal.png" alt="Portugal" class="flag-icon">
-                </h2>
-                <p><strong>Profesión:</strong> Futbolista Profesional</p>
+        <div class="cards-wrapper">
 
-                <div class="section">
-                    <h3>Resumen</h3>
-                    <p>Uno de los mejores futbolistas de todos los tiempos, conocido por su velocidad, potencia y ética de trabajo.</p>
+            <!-- Tarjeta de Cristiano Ronaldo -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="./image/ronaldo.png" alt="Foto de perfil" class="profile-img" />
                 </div>
+                <div class="card-body">
+                    <h2>Cristiano Ronaldo <img src="./image/portugal.png" alt="Portugal" class="flag-icon"></h2>
+                    <div class="ctr">
+                        <h3>Equipo Actual: Al-Nassr <img class="ImgEquipo" src="./image/AlNassr.png"></h3>
+                    </div>
+                    <p>Jugador de Fútbol Profesional</p>
+                    <p>Apasionado, disciplinado y con una carrera legendaria.</p>
 
-                <div class="section">
-                    <h3>Equipos</h3>
-                    <div class="teams">
-                        <span class="team-badge sporting">Sporting CP</span>
-                        <span class="team-badge mu">Manchester United</span>
-                        <span class="team-badge madrid">Real Madrid</span>
-                        <span class="team-badge juventus">Juventus</span>
-                        <span class="team-badge alnassr">Al-Nassr</span>
-                        <span class="team-badge portugal">Portugal</span>
+                    <div class="section">
+                        <h3>Equipos</h3>
+                        <div class="teams">
+                            <span class="team-badge sporting">Sporting CP</span>
+                            <span class="team-badge mu">Manchester United</span>
+                            <span class="team-badge madrid">Real Madrid</span>
+                            <span class="team-badge juventus">Juventus</span>
+                            <span class="team-badge alnassr">Al-Nassr</span>
+                            <span class="team-badge portugal">Portugal</span>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <h3>Habilidades</h3>
+                        <p>Velocidad</p>
+                        <div class="bar"><div class="progress" style="width: 95%"></div></div>
+                        <p>Precisión</p>
+                        <div class="bar"><div class="progress" style="width: 90%"></div></div>
+                        <p>Resistencia</p>
+                        <div class="bar"><div class="progress" style="width: 85%"></div></div>
+                        <p>Regate</p>
+                        <div class="bar"><div class="progress" style="width: 95%; background-color: #f89036;"></div></div>
+                        <p>Pase</p>
+                        <div class="bar"><div class="progress" style="width: 93%; background-color: #f89036;"></div></div>
+                        <p>Recuperación</p>
+                        <div class="bar"><div class="progress" style="width: 89%; background-color: #f89036;"></div></div>
+                    </div>
+
+                    <button class="moreInfoBtn">Más Info</button>
+
+                    <div class="social">
+                        <a href="https://www.instagram.com/cristiano/" target="_blank">
+                            <img src="./image/instagram.png" alt="Instagram" class="social-icon" />
+                        </a>
+                        <a href="https://x.com/Cristiano" target="_blank">
+                            <img src="./image/x.png" alt="Twitter" class="social-icon" />
+                        </a>
+                        <a href="https://www.facebook.com/Cristiano" target="_blank">
+                            <img src="./image/facebook.png" alt="Facebook" class="social-icon" />
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="skills">
-                    <h3>Habilidades</h3>
-                    <p>Velocidad</p>
-                    <div class="bar"><div class="progress" style="width: 95%"></div></div>
-                    <p>Precisión</p>
-                    <div class="bar"><div class="progress" style="width: 90%"></div></div>
-                    <p>Resistencia</p>
-                    <div class="bar"><div class="progress" style="width: 85%"></div></div>
+            <!-- Tarjeta de Eduardo Camavinga -->
+            <div class="card">
+                <div class="card-header" style="background-color: #0d6efd;">
+                    <img src="./image/Camavinga.png" alt="Foto de perfil" class="profile-img" />
                 </div>
+                <div class="card-body">
+                    <h2>Eduardo Camavinga</h2>
+                    <h3>Equipo Actual: Real Madrid <img class="ImgEquipo" src="./image/RealMadrid.png"></h3>
+                    <p>Centrocampista Profesional</p>
+                    <p>Joven talento con gran visión de juego y versatilidad.</p>
 
-                <button id="moreInfoBtn">Más Info</button>
+                    <div class="skills">
+                        <h3>Habilidades</h3>
+                        <p>Velocidad</p>
+                        <div class="bar"><div class="progress" style="width: 95%; background-color: #0d6efd;"></div></div>
+                        <p>Precisión</p>
+                        <div class="bar"><div class="progress" style="width: 85%; background-color: #0d6efd;"></div></div>
+                        <p>Resistencia</p>
+                        <div class="bar"><div class="progress" style="width: 98%; background-color: #0d6efd;"></div></div>
+                        <p>Regate</p>
+                        <div class="bar"><div class="progress" style="width: 88%; background-color: #0d6efd;"></div></div>
+                        <p>Pase</p>
+                        <div class="bar"><div class="progress" style="width: 85%; background-color: #0d6efd;"></div></div>
+                        <p>Recuperación</p>
+                        <div class="bar"><div class="progress" style="width: 90%; background-color: #0d6efd;"></div></div>
+                    </div>
 
-                <div class="social">
-                    <a href="https://www.instagram.com/cristiano/" target="_blank">
-                        <img src="./image/instagram.png" alt="Instagram" class="social-icon" />
-                    </a>
-                    <a href="https://x.com/Cristiano" target="_blank">
-                        <img src="./image/x.png" alt="Twitter" class="social-icon" />
-                    </a>
-                    <a href="https://www.facebook.com/Cristiano" target="_blank">
-                        <img src="./image/facebook.png" alt="Facebook" class="social-icon" />
-                    </a>
+                    <button class="moreInfoBtn ButtonCamavinga">Más Info</button>
+
+                    <div class="social">
+                        <a href="https://www.instagram.com/camavinga/" target="_blank">
+                            <img src="./image/instagram.png" alt="Instagram" class="social-icon" />
+                        </a>
+                        <a href="https://x.com/camavinga" target="_blank">
+                            <img src="./image/x.png" alt="Twitter" class="social-icon" />
+                        </a>
+                        <a href="https://www.facebook.com/eduardocamavinga/" target="_blank">
+                            <img src="./image/facebook.png" alt="Facebook" class="social-icon" />
+                        </a>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal hidden">
+    <!-- Modal Cristiano -->
+    <div id="modal1" class="modal hidden">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Sobre Cristiano Ronaldo</h2>
@@ -83,6 +135,17 @@
         </div>
     </div>
 
+    <!-- Modal Camavinga -->
+    <div id="modal2" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sobre Eduardo Camavinga</h2>
+            <p>Eduardo Camavinga es un joven centrocampista francés que juega para el Real Madrid y la selección francesa.</p>
+            <p>Destaca por su versatilidad, inteligencia táctica y capacidad para recuperar balones. Firma promesa del fútbol mundial.</p>
+        </div>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
+
 </html>

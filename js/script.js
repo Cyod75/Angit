@@ -1,30 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loader = document.getElementById('loader');
-    const container = document.querySelector('.container');
-    const modal = document.getElementById('modal');
-    const closeBtn = document.querySelector('.close');
-    const moreInfoBtn = document.getElementById('moreInfoBtn');
-
-    // Pantalla de carga
-    setTimeout(() => {
-        loader.style.display = 'none';
-        container.classList.remove('hidden');
+document.addEventListener('DOMContentLoaded', function() {
+    // Simular carga
+    setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+        document.querySelector('.container').classList.remove('hidden');
     }, 1500);
 
-    // Mostrar modal
-    moreInfoBtn.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-    });
+    // Modales
+    const modals = [
+        { btnClass: 'moreInfoBtn', modalId: 'modal1' },
+        { btnClass: 'moreInfoBtn', modalId: 'modal2' }
+    ];
 
-    // Cerrar modal
-    closeBtn.addEventListener('click', () => {
-        modal.classList.add('hidden');
-    });
+    modals.forEach((modal, index) => {
+        const btns = document.getElementsByClassName(modal.btnClass);
+        const modalElement = document.getElementById(modal.modalId);
+        const span = modalElement.getElementsByClassName('close')[0];
 
-    // Cerrar modal con clic fuera
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.add('hidden');
+        btns[index].onclick = function() {
+            modalElement.classList.remove('hidden');
+        }
+
+        span.onclick = function() {
+            modalElement.classList.add('hidden');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modalElement) {
+                modalElement.classList.add('hidden');
+            }
         }
     });
 });
